@@ -363,6 +363,10 @@ function xmlNodeToItem(child, tag, newLine, styleList = null) {
     stype.push('purple_hl');
   }
 
+  if (tag === 'title') {
+    stype.push('title');
+  }
+  
   return {
     id: shortid.generate(),
     text: newLine === true ? `\n${text}` : text,
